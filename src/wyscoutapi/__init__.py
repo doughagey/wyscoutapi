@@ -264,7 +264,7 @@ class APIClient:
                                           roundId=round_id,
                                           matchDay=match_day)
 
-    def match_advancedstats(self, match_id, useSides=True,details=None):
+    def match_advancedstats(self, match_id, useSides=False,details=None):
         """
         Returns advanced statistics of a given match
         """
