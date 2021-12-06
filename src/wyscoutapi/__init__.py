@@ -264,6 +264,13 @@ class APIClient:
                                           roundId=round_id,
                                           matchDay=match_day)
 
+    def match_advancedstats(self, match_id, useSides=True,details=None):
+        """
+        Returns advanced statistics of a given match
+        """
+        return self.loader.get_route_json('matches', match_id, 'advancedstats',
+                                          useSides=useSides, details=details)
+
     # Events pack
 
     def match_events(self, match_id, details=None, fetch=None):
