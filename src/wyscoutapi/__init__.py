@@ -153,9 +153,9 @@ class APIClient:
         """ Retrieves a given player's transfers. """
         return self.loader.get_route_json('players', player_id, 'transfers', details=details, fetch=fetch)
 
-    def team_transfers(self, player_id, from_date, to_date, details=None, fetch=None):
+    def team_transfers(self, team_id, from_date, to_date, details=None, fetch=None):
         """ Retrieves player transfers for each team """
-        return self.loader.get_route_json('teams', player_id, 'transfers', fromDate=from_date, toDate=to_date, details=details, fetch=fetch)
+        return self.loader.get_route_json('teams', team_id, 'transfers', toDate=to_date, fromDate=from_date, details=details, fetch=fetch)
 
     def player_matches(self, player_id, details=None, fetch=None):
         """ Returns the list of matches played by the given player in the current season. """
