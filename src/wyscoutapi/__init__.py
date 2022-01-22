@@ -264,6 +264,16 @@ class APIClient:
         """
         return self.loader.get_route_json('players', player_id, 'matches',match_id, 'advancedstats')    
 
+
+    def team_match_advancedstats(self, team_id, match_id):
+        """
+        Returns advanced statistics of a given player in a specific competition's
+        season. The statistics provided are relative globally to the selected season,
+        not to a specific team.
+        """
+        return self.loader.get_route_json('teams', team_id, 'matches',match_id, 'advancedstats')  
+
+
     def team_advancedstats(self, team_id, competition_id, season_id=None,
                              round_id=None, match_day=None):
         """
