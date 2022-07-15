@@ -207,9 +207,9 @@ class APIClient:
         """ Retrieves all the matches for the given season. """
         return self.loader.get_route_json('seasons', season_id, 'fixtures', details=details, fetch=fetch)
 
-    def season_players(self, season_id, details=None, fetch=None):
+    def season_players(self, season_id, details=None, fetch=None, page=None):
         """ Returns the list of players in the given season. """
-        return self.loader.get_route_json('seasons', season_id, 'players', details=details, fetch=fetch)
+        return self.loader.get_route_json('seasons', season_id, 'players', details=details, fetch=fetch, page=page)
 
     def season_teams(self, season_id, details=None, fetch=None):
         """ Returns the list of teams in the given season. """
